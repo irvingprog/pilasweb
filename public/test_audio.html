@@ -18,19 +18,8 @@
   <script>
     pilas = new Pilas();
     pilas.onready = function() {
-      var fondo = new pilas.fondos.Plano();
-      var mono = new pilas.actores.Mono();
-
-      var reir = function() {
-        mono.sonreir()
-      }
-
-      var gritar = function() {
-        mono.gritar()
-      }
-      mono.cuando_hace_click =reir;
-      mono.cuando_mueve_mouse = gritar;
-
+      pilas.mundo.gestor_escenas.cambiar_escena(new MiEscena());
+      //p = new pilas.actores.Pingu();
     }
     pilas.iniciar({ancho: 640, alto: 480, data_path: 'data'});
     pilas.ejecutar();
